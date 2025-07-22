@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5.3 Helpers - Complete Bootstrap Examples</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-bootstrap-fill"></i> Bootstrap 5.3
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="layout.html">Layout</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="components.html">Components</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="content.html">Content</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="forms.html">Forms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="helpers.html">Helpers</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="helpers-hero-section py-5 text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 fw-bold">Bootstrap Helpers</h1>
+                    <p class="lead">Utility classes and helper functions for common tasks and styling patterns in Bootstrap 5.3</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav class="col-md-3 col-lg-2 helpers-sidebar">
+                <div class="position-sticky pt-3">
+                    <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
+                        <span>Helper Utilities</span>
+                    </h6>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#clearfix">Clearfix</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#color-background">Color & Background</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#colored-links">Colored Links</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#focus-ring">Focus Ring</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#icon-link">Icon Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#position">Position</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#ratio">Ratio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#stacks">Stacks</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#stretched-link">Stretched Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#text-truncation">Text Truncation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#vertical-rule">Vertical Rule</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#visually-hidden">Visually Hidden</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Main Content -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 helpers-main-content">
+                <!-- Clearfix -->
+                <section id="clearfix" class="content-section">
+                    <h2 class="section-title">Clearfix</h2>
+                    <div class="example-container">
+                        <h3 class="example-title">Clearfix Utility</h3>
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="example-demo">
+                                    <div class="clearfix-demo bg-light p-3">
+                                        <div class="float-start bg-primary text-white p-2 me-2 mb-2 clearfix-float-element">
+                                            Float Left Element
+                                        </div>
+                                        <div class="float-end bg-success text-white p-2 ms-2 mb-2 clearfix-float-element">
+                                            Float Right Element
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <p class="m-0">This paragraph appears below the floated elements because of the clearfix utility.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="code-display">
+                                    <h5>HTML Code</h5>
+                                    <code class="css-code">
+&lt;div class="float-start"&gt;Float Left&lt;/div&gt;
+&lt;div class="float-end"&gt;Float Right&lt;/div&gt;
+&lt;div class="clearfix"&gt;&lt;/div&gt;
+&lt;p&gt;Content below floated elements&lt;/p&gt;
+
+/* Key Classes */
+.float-start    /* Float element left */
+.float-end      /* Float element right */
+.clearfix       /* Clear floated elements */
+                                    </code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Color & Background -->
+                <section id="color-background" class="content-section">
+                    <h2 class="section-title">Color & Background</h2>
+                    <div class="example-container">
+                        <h3 class="example-title">Color Utilities</h3>
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="example-demo">
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <h5>Text Colors</h5>
+                                            <p class="text-primary">Primary text color</p>
+                                            <p class="text-secondary">Secondary text color</p>
+                                            <p class="text-success">Success text color</p>
+                                            <p class="text-danger">Danger text color</p>
+                                            <p class="text-warning">Warning text color</p>
+                                            <p class="text-info">Info text color</p>
+                                            <p class="text-light bg-dark px-2">Light text color</p>
+                                            <p class="text-dark">Dark text color</p>
+                                            <p class="text-muted">Muted text color</p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h5>Background Colors</h5>
+                                            <div class="bg-primary text-white p-2 mb-2">Primary background</div>
+                                            <div class="bg-secondary text-white p-2 mb-2">Secondary background</div>
+                                            <div class="bg-success text-white p-2 mb-2">Success background</div>
+                                            <div class="bg-danger text-white p-2 mb-2">Danger background</div>
+                                            <div class="bg-warning text-dark p-2 mb-2">Warning background</div>
+                                            <div class="bg-info text-white p-2 mb-2">Info background</div>
+                                            <div class="bg-light text-dark p-2 mb-2">Light background</div>
+                                            <div class="bg-dark text-white p-2">Dark background</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="code-display">
+                                    <h5>HTML Code</h5>
+                                    <code class="css-code">
+/* Text Colors */
+&lt;p class="text-primary"&gt;Primary text&lt;/p&gt;
+&lt;p class="text-secondary"&gt;Secondary text&lt;/p&gt;
+&lt;p class="text-success"&gt;Success text&lt;/p&gt;
+&lt;p class="text-danger"&gt;Danger text&lt;/p&gt;
+&lt;p class="text-warning"&gt;Warning text&lt;/p&gt;
+&lt;p class="text-info"&gt;Info text&lt;/p&gt;
+&lt;p class="text-light"&gt;Light text&lt;/p&gt;
+&lt;p class="text-dark"&gt;Dark text&lt;/p&gt;
+&lt;p class="text-muted"&gt;Muted text&lt;/p&gt;
+
+/* Background Colors */
+&lt;div class="bg-primary"&gt;Primary bg&lt;/div&gt;
+&lt;div class="bg-secondary"&gt;Secondary bg&lt;/div&gt;
+&lt;div class="bg-success"&gt;Success bg&lt;/div&gt;
+&lt;div class="bg-danger"&gt;Danger bg&lt;/div&gt;
+&lt;div class="bg-warning"&gt;Warning bg&lt;/div&gt;
+&lt;div class="bg-info"&gt;Info bg&lt;/div&gt;
+&lt;div class="bg-light"&gt;Light bg&lt;/div&gt;
+&lt;div class="bg-dark"&gt;Dark bg&lt;/div&gt;
+                                    </code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Colored Links -->
+                <section id="colored-links" class="content-section">
+                    <h2 class="section-title">Colored Links</h2>
+                    <div class="example-container">
+                        <h3 class="example-title">Link Color Utilities</h3>
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="example-demo">
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <h5>Standard Link Colors</h5>
+                                            <p><a href="#" class="link-primary">Primary link</a></p>
+                                            <p><a href="#" class="link-secondary">Secondary link</a></p>
+                                            <p><a href="#" class="link-success">Success link</a></p>
+                                            <p><a href="#" class="link-danger">Danger link</a></p>
+                                            <p><a href="#" class="link-warning">Warning link</a></p>
+                                            <p><a href="#" class="link-info">Info link</a></p>
+                                            <p class="bg-dark p-2"><a href="#" class="link-light">Light link</a></p>
+                                            <p><a href="#" class="link-dark">Dark link</a></p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h5>Underlined Link Colors</h5>
+                                            <p><a href="#" class="link-primary link-underline-primary">Primary underlined link</a></p>
+                                            <p><a href="#" class="link-secondary link-underline-secondary">Secondary underlined link</a></p>
+                                            <p><a href="#" class="link-success link-underline-success">Success underlined link</a></p>
+                                            <p><a href="#" class="link-danger link-underline-danger">Danger underlined link</a></p>
+                                            <p><a href="#" class="link-warning link-underline-warning">Warning underlined link</a></p>
+                                            <p><a href="#" class="link-info link-underline-info">Info underlined link</a></p>
+                                            <p><a href="#" class="link-dark link-underline-dark">Dark underlined link</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="code-display">
+                                    <h5>HTML Code</h5>
+                                    <code class="css-code">
+/* Standard Link Colors */
+&lt;a href="#" class="link-primary"&gt;Primary link&lt;/a&gt;
+&lt;a href="#" class="link-secondary"&gt;Secondary link&lt;/a&gt;
+&lt;a href="#" class="link-success"&gt;Success link&lt;/a&gt;
+&lt;a href="#" class="link-danger"&gt;Danger link&lt;/a&gt;
+&lt;a href="#" class="link-warning"&gt;Warning link&lt;/a&gt;
+&lt;a href="#" class="link-info"&gt;Info link&lt;/a&gt;
+&lt;a href="#" class="link-light"&gt;Light link&lt;/a&gt;
+&lt;a href="#" class="link-dark"&gt;Dark link&lt;/a&gt;
+
+/* Underlined Links */
+&lt;a href="#" class="link-primary link-underline-primary"&gt;
+  Primary underlined link&lt;/a&gt;
+&lt;a href="#" class="link-success link-underline-success"&gt;
+  Success underlined link&lt;/a&gt;
+                                    </code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Focus Ring -->
+                <section id="focus-ring" class="content-section">
+                    <h2 class="section-title">Focus Ring</h2>
+                    <div class="example-container">
+                        <h3 class="example-title">Focus Ring Utilities</h3>
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="example-demo">
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <h5>Custom Focus Ring</h5>
+                                            <button type="button" class="btn btn-outline-primary focus-ring focus-ring-primary">
+                                                Primary Focus Ring
+                                            </button>
+                                            <button type="button" class="btn btn-outline-success focus-ring focus-ring-success ms-2">
+                                                Success Focus Ring
+                                            </button>
+                                            <button type="button" class="btn btn-outline-danger focus-ring focus-ring-danger ms-2">
+                                                Danger Focus Ring
+                                            </button>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h5>Focus Ring Input</h5>
+                                            <input type="text" class="form-control focus-ring focus-ring-info mb-2" placeholder="Info focus ring">
+                                            <input type="text" class="form-control focus-ring focus-ring-warning mb-2" placeholder="Warning focus ring">
+                                            <input type="text" class="form-control focus-ring focus-ring-dark" placeholder="Dark focus ring">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="code-display">
+                                    <h5>HTML Code</h5>
+                                    <code class="css-code">
+/* Custom Focus Ring Buttons */
+&lt;button class="btn btn-outline-primary focus-ring focus-ring-primary"&gt;
+  Primary Focus Ring
+&lt;/button&gt;
+
+&lt;button class="btn btn-outline-success focus-ring focus-ring-success"&gt;
+  Success Focus Ring
+&lt;/button&gt;
+
+/* Focus Ring Inputs */
+&lt;input type="text" 
+  class="form-control focus-ring focus-ring-info" 
+  placeholder="Info focus ring"&gt;
+
+&lt;input type="text" 
+  class="form-control focus-ring focus-ring-warning" 
+  placeholder="Warning focus ring"&gt;
+
+/* CSS Classes */
+.focus-ring          /* Base focus ring */
+.focus-ring-primary  /* Primary color focus */
+.focus-ring-success  /* Success color focus */
+.focus-ring-danger   /* Danger color focus */
+.focus-ring-info     /* Info color focus */
+.focus-ring-warning  /* Warning color focus */
+.focus-ring-dark     /* Dark color focus */
+                                    </code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Icon Link -->
+                <section id="icon-link" class="content-section">
+                    <h2 class="section-title">Icon Link</h2>
+                    <div class="example-container">
+                        <h3 class="example-title">Icon Link Helper</h3>
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="example-demo">
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <h5>Basic Icon Links</h5>
+                                            <div class="icon-link-container">
+                                                <a class="icon-link" href="#">
+                                                    <i class="bi bi-arrow-right"></i>
+                                                    Go to next page
+                                                </a>
+                                            </div>
+                                            <div class="icon-link-container">
+                                                <a class="icon-link" href="#">
+                                                    <i class="bi bi-download"></i>
+                                                    Download file
+                                                </a>
+                                            </div>
+                                            <div class="icon-link-container">
+                                                <a class="icon-link" href="#">
+                                                    Share article
+                                                    <i class="bi bi-share"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h5>Colored Icon Links</h5>
+                                            <div class="icon-link-container">
+                                                <a class="icon-link text-primary" href="#">
+                                                    <i class="bi bi-link-45deg"></i>
+                                                    Primary link
+                                                </a>
+                                            </div>
+                                            <div class="icon-link-container">
+                                                <a class="icon-link text-success" href="#">
+                                                    <i class="bi bi-check-circle"></i>
+                                                    Success link
+                                                </a>
+                                            </div>
+                                            <div class="icon-link-container">
+                                                <a class="icon-link text-danger" href="#">
+                                                    <i class="bi bi-exclamation-triangle"></i>
+                                                    Danger link
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="code-display">
+                                    <h5>HTML Code</h5>
+                                    <code class="css-code">
+/* Icon Before Text */
+&lt;a class="icon-link" href="#"&gt;
+  &lt;i class="bi bi-arrow-right"&gt;&lt;/i&gt;
+  Go to next page
+&lt;/a&gt;
+
+&lt;a class="icon-link" href="#"&gt;
+  &lt;i class="bi bi-download"&gt;&lt;/i&gt;
+  Download file
+&lt;/a&gt;
+
+/* Icon After Text */
+&lt;a class="icon-link" href="#"&gt;
+  Share article
+  &lt;i class="bi bi-share"&gt;&lt;/i&gt;
+&lt;/a&gt;
+
+/* Colored Icon Links */
+&lt;a class="icon-link text-primary" href="#"&gt;
+  &lt;i class="bi bi-link-45deg"&gt;&lt;/i&gt;
+  Primary link
+&lt;/a&gt;
+
+&lt;a class="icon-link text-success" href="#"&gt;
+  &lt;i class="bi bi-check-circle"&gt;&lt;/i&gt;
+  Success link
+&lt;/a&gt;
+
+/* CSS Class */
+.icon-link    /* Base icon link class */
+                                    </code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Position -->
+                <section id="position" class="content-section">
+                    <h2 class="section-title">Position</h2>
+                    <div class="example-container">
+                        <h3 class="example-title">Position Utilities</h3>
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="example-demo">
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <h5>Positioning Types</h5>
+                                            <div class="position-demo-container bg-light p-3">
+                                                <div class="position-static bg-primary text-white p-2 mb-2">Static position</div>
+                                                <div class="position-relative bg-success text-white p-2 mb-2">
+                                                    Relative position
+                                                    <div class="position-absolute top-0 end-0 bg-warning text-dark p-1 position-absolute-demo">
+                                                        Absolute
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h5>Position Values</h5>
+                                            <div class="position-demo-container bg-light p-3">
+                                                <div class="position-relative bg-info text-white p-3">
+                                                    Parent (relative)
+                                                    <div class="position-absolute top-0 start-0 bg-danger text-white p-1 position-corner">Top Start</div>
+                                                    <div class="position-absolute top-0 end-0 bg-danger text-white p-1 position-corner">Top End</div>
+                                                    <div class="position-absolute bottom-0 start-0 bg-danger text-white p-1 position-corner">Bottom Start</div>
+                                                    <div class="position-absolute bottom-0 end-0 bg-danger text-white p-1 position-corner">Bottom End</div>
+                                                    <div class="position-absolute top-50 start-50 translate-middle bg-warning text-dark p-1">Center</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="code-display">
+                                    <h5>HTML Code</h5>
+                                    <code class="css-code">
+/* Position Types */
+&lt;div class="position-static"&gt;Static&lt;/div&gt;
+&lt;div class="position-relative"&gt;Relative&lt;/div&gt;
+&lt;div class="position-absolute"&gt;Absolute&lt;/div&gt;
+&lt;div class="position-fixed"&gt;Fixed&lt;/div&gt;
+&lt;div class="position-sticky"&gt;Sticky&lt;/div&gt;
+
+/* Position Values */
+&lt;div class="position-absolute top-0 start-0"&gt;
+  Top Start
+&lt;/div&gt;
+&lt;div class="position-absolute top-0 end-0"&gt;
+  Top End
+&lt;/div&gt;
+&lt;div class="position-absolute bottom-0 start-0"&gt;
+  Bottom Start
+&lt;/div&gt;
+&lt;div class="position-absolute bottom-0 end-0"&gt;
+  Bottom End
+&lt;/div&gt;
+
+/* Center Positioning */
+&lt;div class="position-absolute top-50 start-50 translate-middle"&gt;
+  Perfect Center
+&lt;/div&gt;
+
+/* Key Classes */
+.position-static      /* Static positioning */
+.position-relative    /* Relative positioning */
+.position-absolute    /* Absolute positioning */
+.position-fixed       /* Fixed positioning */
+.position-sticky      /* Sticky positioning */
+.top-0, .top-50, .top-100
+.bottom-0, .bottom-50, .bottom-100
+.start-0, .start-50, .start-100
+.end-0, .end-50, .end-100
+.translate-middle     /* Center transform */
+                                    </code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Ratio -->
+                <section id="ratio" class="content-section">
+                    <h2 class="section-title">Ratio</h2>
+                    <div class="example-container">
+                        <h3 class="example-title">Aspect Ratio Utilities</h3>
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="example-demo">
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <h5>Video Ratios</h5>
+                                            <div class="ratio ratio-16x9 mb-3">
+                                                <div class="ratio-content bg-primary text-white d-flex align-items-center justify-content-center">
+                                                    16:9 Aspect Ratio
+                                                </div>
+                                            </div>
+                                            <div class="ratio ratio-4x3">
+                                                <div class="ratio-content bg-success text-white d-flex align-items-center justify-content-center">
+                                                    4:3 Aspect Ratio
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h5>Square & Custom Ratios</h5>
+                                            <div class="ratio ratio-1x1 mb-3">
+                                                <div class="ratio-content bg-warning text-dark d-flex align-items-center justify-content-center">
+                                                    1:1 Square Ratio
+                                                </div>
+                                            </div>
+                                            <div class="ratio ratio-21x9">
+                                                <div class="ratio-content bg-info text-white d-flex align-items-center justify-content-center">
+                                                    21:9 Ultra-wide Ratio
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="code-display">
+                                    <h5>HTML Code</h5>
+                                    <code class="css-code">
+/* 16:9 Aspect Ratio (YouTube videos) */
+&lt;div class="ratio ratio-16x9"&gt;
+  &lt;iframe src="video.mp4"&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+/* 4:3 Aspect Ratio (TV/Monitor) */
+&lt;div class="ratio ratio-4x3"&gt;
+  &lt;iframe src="content.html"&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+/* 1:1 Square Ratio (Instagram) */
+&lt;div class="ratio ratio-1x1"&gt;
+  &lt;div&gt;Square content&lt;/div&gt;
+&lt;/div&gt;
+
+/* 21:9 Ultra-wide Ratio (Cinema) */
+&lt;div class="ratio ratio-21x9"&gt;
+  &lt;div&gt;Ultra-wide content&lt;/div&gt;
+&lt;/div&gt;
+
+/* Custom Ratio (CSS custom property) */
+&lt;div class="ratio" style="--bs-aspect-ratio: 50%;"&gt;
+  &lt;div&gt;Custom 2:1 ratio&lt;/div&gt;
+&lt;/div&gt;
+
+/* Key Classes */
+.ratio          /* Base ratio container */
+.ratio-1x1      /* 1:1 square ratio */
+.ratio-4x3      /* 4:3 traditional ratio */
+.ratio-16x9     /* 16:9 widescreen ratio */
+.ratio-21x9     /* 21:9 ultra-wide ratio */
+                                    </code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Stacks -->
+                <section id="stacks" class="content-section">
+                    <h2 class="section-title">Stacks</h2>
+                    <div class="example-container">
+                        <h3 class="example-title">Stack Layout Utilities</h3>
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="example-demo">
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <h5>Vertical Stack (vstack)</h5>
+                                            <div class="vstack gap-3 stack-demo">
+                                                <div class="bg-primary text-white p-2 text-center">First item</div>
+                                                <div class="bg-secondary text-white p-2 text-center">Second item</div>
+                                                <div class="bg-success text-white p-2 text-center">Third item</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h5>Horizontal Stack (hstack)</h5>
+                                            <div class="hstack gap-3 stack-demo">
+                                                <div class="bg-primary text-white p-2">Item 1</div>
+                                                <div class="bg-secondary text-white p-2">Item 2</div>
+                                                <div class="bg-success text-white p-2 ms-auto">Auto margin</div>
+                                            </div>
+                                            <div class="hstack gap-2 mt-3">
+                                                <button class="btn btn-outline-primary">Button 1</button>
+                                                <div class="vr"></div>
+                                                <button class="btn btn-outline-secondary">Button 2</button>
+                                                <div class="vr"></div>
+                                                <button class="btn btn-outline-success">Button 3</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="code-display">
+                                    <h5>HTML Code</h5>
+                                    <code class="css-code">
+/* Vertical Stack (Column Layout) */
+&lt;div class="vstack gap-3"&gt;
+  &lt;div&gt;First item&lt;/div&gt;
+  &lt;div&gt;Second item&lt;/div&gt;
+  &lt;div&gt;Third item&lt;/div&gt;
+&lt;/div&gt;
+
+/* Horizontal Stack (Row Layout) */
+&lt;div class="hstack gap-3"&gt;
+  &lt;div&gt;Item 1&lt;/div&gt;
+  &lt;div&gt;Item 2&lt;/div&gt;
+  &lt;div class="ms-auto"&gt;Auto margin&lt;/div&gt;
+&lt;/div&gt;
+
+/* Stack with Dividers */
+&lt;div class="hstack gap-2"&gt;
+  &lt;button class="btn btn-primary"&gt;Button 1&lt;/button&gt;
+  &lt;div class="vr"&gt;&lt;/div&gt;
+  &lt;button class="btn btn-secondary"&gt;Button 2&lt;/button&gt;
+  &lt;div class="vr"&gt;&lt;/div&gt;
+  &lt;button class="btn btn-success"&gt;Button 3&lt;/button&gt;
+&lt;/div&gt;
+
+/* Gap Utilities */
+gap-0, gap-1, gap-2, gap-3, gap-4, gap-5
+
+/* Key Classes */
+.vstack       /* Vertical stack (flexbox column) */
+.hstack       /* Horizontal stack (flexbox row) */
+.gap-{size}   /* Gap between stack items */
+.ms-auto      /* Margin start auto (push right) */
+.me-auto      /* Margin end auto (push left) */
+.vr           /* Vertical rule/divider */
+                                    </code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Stretched Link -->
+                <section id="stretched-link" class="content-section">
+                    <h2 class="section-title">Stretched Link</h2>
+                    <div class="example-container">
+                        <h3 class="example-title">Stretched Link Utility</h3>
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="example-demo">
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <div class="card helpers-card-width">
+                                                <img src="data:image/svg+xml,%3csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100' height='100' fill='%23868e96'/%3e%3ctext x='50%25' y='50%25' font-size='18' text-anchor='middle' alignment-baseline='middle' font-family='monospace, monospace' fill='%23dee2e6'%3eImage%3c/text%3e%3c/svg%3e" class="card-img-top" alt="Card image">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Card with stretched link</h5>
+                                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                    <a href="#" class="btn btn-primary stretched-link">Go somewhere</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="d-flex position-relative">
+                                                <img src="data:image/svg+xml,%3csvg width='144' height='144' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='144' height='144' fill='%23868e96'/%3e%3ctext x='50%25' y='50%25' font-size='18' text-anchor='middle' alignment-baseline='middle' font-family='monospace, monospace' fill='%23dee2e6'%3eImage%3c/text%3e%3c/svg%3e" class="flex-shrink-0 me-3" alt="Media object image">
+                                                <div>
+                                                    <h5 class="mt-0">Media with stretched link</h5>
+                                                    <p>This is some placeholder content for the media object. It is intended to mimic what some real-world content would look like.</p>
+                                                    <a href="#" class="stretched-link">Stretched link</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="code-display">
+                                    <h5>HTML Code</h5>
+                                    <code class="css-code">
+/* Card with Stretched Link */
+&lt;div class="card"&gt;
+  &lt;img src="..." class="card-img-top"&gt;
+  &lt;div class="card-body"&gt;
+    &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+    &lt;p class="card-text"&gt;Card content...&lt;/p&gt;
+    &lt;a href="#" class="btn btn-primary stretched-link"&gt;
+      Go somewhere
+    &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+/* Media Object with Stretched Link */
+&lt;div class="d-flex position-relative"&gt;
+  &lt;img src="..." class="flex-shrink-0 me-3"&gt;
+  &lt;div&gt;
+    &lt;h5 class="mt-0"&gt;Media title&lt;/h5&gt;
+    &lt;p&gt;Media content...&lt;/p&gt;
+    &lt;a href="#" class="stretched-link"&gt;
+      Stretched link
+    &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+/* Key Class */
+.stretched-link    /* Makes entire container clickable */
+
+/* Note: Parent must have position-relative */
+/* The stretched-link class creates a pseudo-element */
+/* that covers the entire containing block */
+                                    </code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Text Truncation -->
+                <section id="text-truncation" class="content-section">
+                    <h2 class="section-title">Text Truncation</h2>
+                    <div class="example-container">
+                        <h3 class="example-title">Text Truncation Utility</h3>
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="example-demo">
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <h5>Basic Text Truncation</h5>
+                                            <div class="text-truncate text-truncate-demo">
+                                                This text is quite long and will be truncated with an ellipsis when it exceeds the container width.
+                                            </div>
+                                            <div class="text-truncate text-truncate-demo helpers-text-truncate-width mt-2">
+                                                Shorter container with truncated text that shows ellipsis.
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h5>Truncation in Components</h5>
+                                            <div class="card helpers-card-width">
+                                                <div class="card-body">
+                                                    <h5 class="card-title text-truncate">Very long card title that gets truncated</h5>
+                                                    <p class="card-text">Some quick example text with a <span class="text-truncate d-inline-block helpers-inline-truncate-width">very long inline text that gets truncated</span> in the middle of the sentence.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="code-display">
+                                    <h5>HTML Code</h5>
+                                    <code class="css-code">
+/* Basic Text Truncation */
+&lt;div class="text-truncate" style="max-width: 300px;"&gt;
+  This text is quite long and will be truncated...
+&lt;/div&gt;
+
+/* Card Title Truncation */
+&lt;div class="card"&gt;
+  &lt;div class="card-body"&gt;
+    &lt;h5 class="card-title text-truncate"&gt;
+      Very long card title that gets truncated
+    &lt;/h5&gt;
+    &lt;p class="card-text"&gt;Card content...&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+/* Inline Text Truncation */
+&lt;p&gt;
+  Some text with 
+  &lt;span class="text-truncate d-inline-block" 
+        style="max-width: 150px;"&gt;
+    very long inline text that gets truncated
+  &lt;/span&gt; 
+  in the middle.
+&lt;/p&gt;
+
+/* Key Class */
+.text-truncate    /* Truncate text with ellipsis */
+
+/* CSS Properties Applied */
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+
+/* Note: Requires a fixed width on the element */
+/* Use max-width or width to set container size */
+                                    </code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Vertical Rule -->
+                <section id="vertical-rule" class="content-section">
+                    <h2 class="section-title">Vertical Rule</h2>
+                    <div class="example-container">
+                        <h3 class="example-title">Vertical Rule Utility</h3>
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="example-demo">
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <h5>Basic Vertical Rules</h5>
+                                            <div class="d-flex helpers-vertical-rule-height">
+                                                <div class="d-flex align-items-center">Content 1</div>
+                                                <div class="vr mx-3"></div>
+                                                <div class="d-flex align-items-center">Content 2</div>
+                                                <div class="vr mx-3"></div>
+                                                <div class="d-flex align-items-center">Content 3</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h5>Vertical Rules in Navigation</h5>
+                                            <nav class="navbar navbar-expand navbar-light bg-light">
+                                                <div class="navbar-nav">
+                                                    <a class="nav-link" href="#">Home</a>
+                                                    <div class="vr"></div>
+                                                    <a class="nav-link" href="#">About</a>
+                                                    <div class="vr"></div>
+                                                    <a class="nav-link" href="#">Services</a>
+                                                    <div class="vr"></div>
+                                                    <a class="nav-link" href="#">Contact</a>
+                                                </div>
+                                            </nav>
+                                            <div class="hstack gap-3 mt-3">
+                                                <button class="btn btn-outline-primary">Button 1</button>
+                                                <div class="vr"></div>
+                                                <button class="btn btn-outline-secondary">Button 2</button>
+                                                <div class="vr"></div>
+                                                <button class="btn btn-outline-success">Button 3</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="code-display">
+                                    <h5>HTML Code</h5>
+                                    <code class="css-code">
+/* Basic Vertical Rules */
+&lt;div class="d-flex"&gt;
+  &lt;div&gt;Content 1&lt;/div&gt;
+  &lt;div class="vr mx-3"&gt;&lt;/div&gt;
+  &lt;div&gt;Content 2&lt;/div&gt;
+  &lt;div class="vr mx-3"&gt;&lt;/div&gt;
+  &lt;div&gt;Content 3&lt;/div&gt;
+&lt;/div&gt;
+
+/* Navigation with Vertical Rules */
+&lt;nav class="navbar navbar-expand"&gt;
+  &lt;div class="navbar-nav"&gt;
+    &lt;a class="nav-link" href="#"&gt;Home&lt;/a&gt;
+    &lt;div class="vr"&gt;&lt;/div&gt;
+    &lt;a class="nav-link" href="#"&gt;About&lt;/a&gt;
+    &lt;div class="vr"&gt;&lt;/div&gt;
+    &lt;a class="nav-link" href="#"&gt;Services&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+
+/* Button Group with Dividers */
+&lt;div class="hstack gap-3"&gt;
+  &lt;button class="btn btn-primary"&gt;Button 1&lt;/button&gt;
+  &lt;div class="vr"&gt;&lt;/div&gt;
+  &lt;button class="btn btn-secondary"&gt;Button 2&lt;/button&gt;
+  &lt;div class="vr"&gt;&lt;/div&gt;
+  &lt;button class="btn btn-success"&gt;Button 3&lt;/button&gt;
+&lt;/div&gt;
+
+/* Key Class */
+.vr    /* Vertical rule/divider */
+
+/* CSS Properties */
+display: inline-block;
+align-self: stretch;
+width: 1px;
+min-height: 1em;
+background-color: currentcolor;
+opacity: 0.25;
+                                    </code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Visually Hidden -->
+                <section id="visually-hidden" class="content-section">
+                    <h2 class="section-title">Visually Hidden</h2>
+                    <div class="example-container">
+                        <h3 class="example-title">Screen Reader Utilities</h3>
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="example-demo">
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <h5>Visually Hidden Text</h5>
+                                            <p>
+                                                This paragraph has 
+                                                <span class="visually-hidden">hidden text for screen readers only</span>
+                                                visible content.
+                                            </p>
+                                            <button type="button" class="btn btn-primary">
+                                                <i class="bi bi-heart" aria-hidden="true"></i>
+                                                <span class="visually-hidden">Add to favorites</span>
+                                                Like
+                                            </button>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h5>Focusable Hidden Content</h5>
+                                            <a class="visually-hidden-focusable" href="#main-content">Skip to main content</a>
+                                            <p class="mt-3">
+                                                Press Tab to see the skip link appear. This is useful for keyboard navigation accessibility.
+                                            </p>
+                                            <form>
+                                                <label for="search-input" class="visually-hidden">Search</label>
+                                                <input type="search" id="search-input" class="form-control" placeholder="Search...">
+                                                <button type="submit" class="btn btn-outline-secondary mt-2">
+                                                    <i class="bi bi-search" aria-hidden="true"></i>
+                                                    <span class="visually-hidden">Submit search</span>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="code-display">
+                                    <h5>HTML Code</h5>
+                                    <code class="css-code">
+/* Visually Hidden Text */
+&lt;p&gt;
+  This paragraph has 
+  &lt;span class="visually-hidden"&gt;
+    hidden text for screen readers only
+  &lt;/span&gt;
+  visible content.
+&lt;/p&gt;
+
+/* Button with Hidden Description */
+&lt;button type="button" class="btn btn-primary"&gt;
+  &lt;i class="bi bi-heart" aria-hidden="true"&gt;&lt;/i&gt;
+  &lt;span class="visually-hidden"&gt;Add to favorites&lt;/span&gt;
+  Like
+&lt;/button&gt;
+
+/* Skip Link (Focusable) */
+&lt;a class="visually-hidden-focusable" href="#main"&gt;
+  Skip to main content
+&lt;/a&gt;
+
+/* Hidden Form Label */
+&lt;label for="search" class="visually-hidden"&gt;
+  Search
+&lt;/label&gt;
+&lt;input type="search" id="search" 
+       class="form-control" placeholder="Search..."&gt;
+
+/* Key Classes */
+.visually-hidden           /* Hidden from view, visible to screen readers */
+.visually-hidden-focusable /* Hidden until focused (skip links) */
+
+/* CSS Properties Applied */
+position: absolute !important;
+width: 1px !important;
+height: 1px !important;
+padding: 0 !important;
+margin: -1px !important;
+overflow: hidden !important;
+clip: rect(0, 0, 0, 0) !important;
+white-space: nowrap !important;
+border: 0 !important;
+                                    </code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Bootstrap 5.3 Helpers</h5>
+                    <p class="mb-0">Comprehensive examples of Bootstrap utility helpers and helper classes.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">
+                        <a href="https://getbootstrap.com/docs/5.3/helpers/" class="text-light">
+                            <i class="bi bi-book"></i> Bootstrap Documentation
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
